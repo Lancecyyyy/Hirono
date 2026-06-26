@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About &mdash; Hirono</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;1,9..144,400&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body data-page="about">
+
+<header>
+  <a class="logo" href="index.html">hirono.</a>
+  <nav class="top-nav">
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="about.html">About</a>
+  </nav>
+  <button class="cart-btn" onclick="openCart()">
+    Cart
+    <span class="cart-count" id="cartCount">0</span>
+  </button>
+</header>
+
+<section class="about-page">
+  <div class="eyebrow">About this shop</div>
+  <h1>A quiet corner for a quiet character.</h1>
+
+  <p>This is a fan-made shop built as a web development class activity. It isn't an official store, and it isn't affiliated with POP MART or with Hirono's creator. Think of it as a tribute — a small, made-up storefront imagining what it might feel like to browse Hirono's world online.</p>
+
+  <h2>Who is Hirono?</h2>
+  <p>Hirono is a designer toy character created by the artist known as Lang, released through POP MART. Unlike a lot of designer toys that lean cute or mischievous, Hirono leans quiet — a small, melancholic boy whose figures are built around mood and atmosphere rather than jokes. Each release tends to follow a theme: childhood, isolation, transformation, shelter, memory.</p>
+  <p>The figures are sold as blind boxes, so part of the experience is not knowing which design you'll get until you open it. That's the idea behind the "lid" on every product card in the shop — it's a small nod to that same moment of not knowing.</p>
+
+  <h2>Why this exists</h2>
+  <p>This project started as a calculator and an order-form exercise, then grew into something closer to a real storefront — a sidebar of series, a search bar, a cart that remembers what you've added, and a receipt when you check out. None of the figures here are real inventory; the names and prices are just enough to make the shop feel lived-in.</p>
+
+  <h2>A note on rights</h2>
+  <p>Hirono, its characters, and all related artwork belong to their creator and to POP MART. This page exists for educational purposes only, and makes no claim of ownership over the character or its likeness.</p>
+</section>
+
+<div class="overlay" id="overlay" onclick="closeCart()"></div>
+
+<aside class="drawer" id="drawer">
+  <div class="drawer-head">
+    <h3>Your bag</h3>
+    <button class="close-btn" onclick="closeCart()">&times;</button>
+  </div>
+  <div class="drawer-items" id="drawerItems">
+    <p class="empty-msg">Nothing here yet. Pick a box to begin.</p>
+  </div>
+  <div class="drawer-foot">
+    <div class="drawer-line"><span>Subtotal</span><span id="subtotalVal">₱0.00</span></div>
+    <div class="drawer-line total"><span>Total</span><span id="totalVal">₱0.00</span></div>
+    <button class="checkout-btn" onclick="checkout()">Checkout</button>
+  </div>
+</aside>
+
+<div class="toast" id="toast"></div>
+
+<div class="receipt-overlay" id="receiptOverlay" onclick="if(event.target===this) closeReceipt()">
+  <div class="receipt-modal">
+    <button class="receipt-close" onclick="closeReceipt()">&times;</button>
+    <div class="receipt">
+      <div class="receipt-title">HIRONO RECEIPT</div>
+      <div class="receipt-sub" id="receiptOrderNo">order no. 0001</div>
+      <hr>
+      <div id="receiptItems"></div>
+      <hr>
+      <div class="receipt-line total"><span>Total</span><span id="receiptTotal">₱0.00</span></div>
+      <div class="thank-you">Salamat sa pag-order!</div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  Fan-made tribute shop for a web development class activity &middot; not affiliated with POP MART
+</footer>
+
+<script src="data.js"></script>
+<script src="shop.js"></script>
+</body>
+</html>

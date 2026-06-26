@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shop &mdash; Hirono</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;1,9..144,400&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body data-page="shop">
+
+<header>
+  <a class="logo" href="index.html">hirono.</a>
+  <nav class="top-nav">
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="about.html">About</a>
+  </nav>
+  <button class="cart-btn" onclick="openCart()">
+    Cart
+    <span class="cart-count" id="cartCount">0</span>
+  </button>
+</header>
+
+<section class="shop" id="shop">
+  <div class="shop-layout">
+    <nav class="series-sidebar" id="seriesSidebar"></nav>
+    <div class="grid-wrap">
+      <div class="search-row">
+        <input type="text" id="searchInput" placeholder="Search figures by name...">
+      </div>
+      <div class="page-head" id="pageHead">
+        <div class="breadcrumb" id="breadcrumb">Shop</div>
+        <h2 id="pageTitle"></h2>
+        <p id="pageBlurb"></p>
+      </div>
+      <div class="grid" id="productGrid"></div>
+    </div>
+  </div>
+</section>
+
+<div class="overlay" id="overlay" onclick="closeCart()"></div>
+
+<aside class="drawer" id="drawer">
+  <div class="drawer-head">
+    <h3>Your bag</h3>
+    <button class="close-btn" onclick="closeCart()">&times;</button>
+  </div>
+  <div class="drawer-items" id="drawerItems">
+    <p class="empty-msg">Nothing here yet. Pick a box to begin.</p>
+  </div>
+  <div class="drawer-foot">
+    <div class="drawer-line"><span>Subtotal</span><span id="subtotalVal">₱0.00</span></div>
+    <div class="drawer-line total"><span>Total</span><span id="totalVal">₱0.00</span></div>
+    <button class="checkout-btn" onclick="checkout()">Checkout</button>
+  </div>
+</aside>
+
+<div class="toast" id="toast"></div>
+
+<div class="receipt-overlay" id="receiptOverlay" onclick="if(event.target===this) closeReceipt()">
+  <div class="receipt-modal">
+    <button class="receipt-close" onclick="closeReceipt()">&times;</button>
+    <div class="receipt">
+      <div class="receipt-title">HIRONO RECEIPT</div>
+      <div class="receipt-sub" id="receiptOrderNo">order no. 0001</div>
+      <hr>
+      <div id="receiptItems"></div>
+      <hr>
+      <div class="receipt-line total"><span>Total</span><span id="receiptTotal">₱0.00</span></div>
+      <div class="thank-you">Salamat sa pag-order!</div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  Fan-made tribute shop for a web development class activity &middot; not affiliated with POP MART
+</footer>
+
+<script src="data.js"></script>
+<script src="shop.js"></script>
+</body>
+</html>
