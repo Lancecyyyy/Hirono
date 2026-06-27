@@ -1,13 +1,13 @@
 const PRODUCTS = [
-  { id:1, name:"The Other One", img:"images/theotherone.png", imgAlt:"images/theothertwo.jpg", series:"other-one", tag:"The Other One · Oct 2021", price:790, desc:"The debut series that introduced Hirono's introverted, melancholic world.", featured:true },
-  { id:2, name:"Little Mischief", img:"images/mischef.jpg", imgAlt:"images/mischef2.jpg", series:"little-mischief", tag:"Little Mischief · Aug 2022", price:790, desc:"Leans into Hirono's naughtier, rebellious childhood side." },
-  { id:3, name:"City of Mercy", img:"images/city.jpg", imgAlt:"images/city2.jpg", series:"city-of-mercy", tag:"City of Mercy · Nov 2022", price:790, desc:"Raw emotion and survival — finding grace in bleak settings.", featured:true },
-  { id:4, name:"Mime", img:"images/mime.jpg", imgAlt:"images/mime2.jpg", series:"mime", tag:"Mime · Jul 2023", price:850, desc:"Expressive, non-verbal storytelling with mechanical design details." },
-  { id:5, name:"Reshape", img:"images/reshape.webp", imgAlt:"images/reshape2.webp", series:"reshape", tag:"Reshape · Dec 2023", price:850, desc:"Fragmented forms exploring personal transformation.", featured:true },
-  { id:6, name:"Shelter", img:"images/shelter.webp", imgAlt:"images/shelter2.webp", series:"shelter", tag:"Shelter · May 2024", price:890, desc:"A search for spiritual sanctuary, or just somewhere to hide for a while." },
-  { id:7, name:"Echo", img:"images/echo.webp", imgAlt:"images/echo2.webp", series:"echo", tag:"Echo · Late 2024", price:890, desc:"A colorful, nostalgic look back at childhood dreams.", featured:true },
-  { id:8, name:"Le Petit Prince", img:"images/le.webp", imgAlt:"images/le2.webp", series:"le-petit-prince", tag:"Le Petit Prince collab · 2024", price:1450, desc:"A storybook crossover, reimagining its cast in Hirono's world." },
-  { id:9, name:"CLOT", img:"images/clot.webp", imgAlt:"images/clot2.jpg", series:"clot", tag:"CLOT collab · 2024", price:1890, desc:"A high-fashion streetwear collaboration with CLOT.", featured:true },
+  { id:1, name:"The Other One", img:"theotherone.png", imgAlt:"theothertwo.jpg", series:"other-one", tag:"The Other One · Oct 2021", price:790, desc:"The debut series that introduced Hirono's introverted, melancholic world.", featured:true },
+  { id:2, name:"Little Mischief", img:"mischef.jpg", imgAlt:"mischef2.jpg", series:"little-mischief", tag:"Little Mischief · Aug 2022", price:790, desc:"Leans into Hirono's naughtier, rebellious childhood side." },
+  { id:3, name:"City of Mercy", img:"city.jpg", imgAlt:"city2.jpg", series:"city-of-mercy", tag:"City of Mercy · Nov 2022", price:790, desc:"Raw emotion and survival — finding grace in bleak settings.", featured:true },
+  { id:4, name:"Mime", img:"mime.jpg", imgAlt:"mime2.jpg", series:"mime", tag:"Mime · Jul 2023", price:850, desc:"Expressive, non-verbal storytelling with mechanical design details." },
+  { id:5, name:"Reshape", img:"reshape.webp", imgAlt:"reshape2.webp", series:"reshape", tag:"Reshape · Dec 2023", price:850, desc:"Fragmented forms exploring personal transformation.", featured:true },
+  { id:6, name:"Shelter", img:"shelter.webp", imgAlt:"shelter2.webp", series:"shelter", tag:"Shelter · May 2024", price:890, desc:"A search for spiritual sanctuary, or just somewhere to hide for a while." },
+  { id:7, name:"Echo", img:"echo.webp", imgAlt:"echo2.webp", series:"echo", tag:"Echo · Late 2024", price:890, desc:"A colorful, nostalgic look back at childhood dreams.", featured:true },
+  { id:8, name:"Le Petit Prince", img:"le.webp", imgAlt:"le2.webp", series:"le-petit-prince", tag:"Le Petit Prince collab · 2024", price:1450, desc:"A storybook crossover, reimagining its cast in Hirono's world." },
+  { id:9, name:"CLOT", img:"clot.webp", imgAlt:"clot2.jpg", series:"clot", tag:"CLOT collab · 2024", price:1890, desc:"A high-fashion streetwear collaboration with CLOT.", featured:true },
 ];
 
 const SERIES_ORDER = [
